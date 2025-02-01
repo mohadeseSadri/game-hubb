@@ -3,9 +3,8 @@ import ColorMode from "./ColorMode";
 function Navbar() {
   return (
     <>
-      <nav className="row d-flex">
+      <nav className="row d-flex justify-content-space-between">
         <img alt="logo" src={logo} className="logo col-1" />
-        <div className="menu col-7">menu</div>
         <div className="colorMode col-2 d-flex">
           <ColorMode />
         </div>
