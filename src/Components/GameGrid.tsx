@@ -1,16 +1,19 @@
-import useGames from "../hooks/useGames"
+import useGames from "../hooks/useGames";
+import GameCard from "./GameCard";
 
 function GameGrid() {
-  const {games, error} = useGames();
+  const { games, error } = useGames();
 
   return (
     <>
       {error && <h4>{error}</h4>}
-      <ul>
-        {games.map(game => <li key={game.id}>{game.name}</li>)}
-      </ul>
+      <div>
+        {games.map((game) => (
+          <GameCard key={game.id} game={game} />
+        ))}
+      </div>
     </>
-  )
+  );
 }
 
-export default GameGrid
+export default GameGrid;
